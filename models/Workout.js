@@ -39,11 +39,20 @@ Workout.init(
         key: 'id',
       },
     },
+    created_at: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal('NOW()'),
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal('NOW()'),
+    },
   },
   {
     sequelize,
     timestamps: true,
     freezeTableName: true,
+    underscored: true,
     modelName: 'workout',
   }
 );
