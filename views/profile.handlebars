@@ -1,3 +1,5 @@
+<link href="./css/bulma-calendar.min.css" rel="stylesheet">
+
 <div class="row">
   <div class="col-auto">
     <h2 style="text-align: center;">Welcome, {{name}}!</h2>
@@ -6,15 +8,17 @@
 
 </head>
   <body>
+    
     <div class="container box p-6
                 has-background-light">
       <h1 class="title has-text-centered has-text-success">
         New Workout Form
       </h1>
       <form action="">
+        <input type="date" id="bulmaCalender">
         <div class="field">
           <label class="label">Workout Type</label>
-           <div class="control">
+            <div class="control">
             <div class="select">
               <select>
                 <option>Cardio</option>
@@ -99,4 +103,7 @@
       </form>
     </div>
   </body>
-<script src="./js/profile.js"></script>
+
+<script src="./js/bulma-calendar.min.js"></script>
+<script src="./js/date-picker.js"></script>
+{{!-- <script src="./js/profile.js"></script> --}}
