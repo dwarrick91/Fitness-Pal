@@ -19,4 +19,5 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
+  partialsDir: __dirname + '/views/partials/',
 };
