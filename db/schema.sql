@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS fitnesspal_db;
-CREATE DATABASE fitnesspal_db;
+DROP DATABASE IF EXISTS fitness_db;
+CREATE DATABASE fitness_db;
