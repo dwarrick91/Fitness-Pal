@@ -1,3 +1,26 @@
+body{
+  margin: auto;
+  padding: 50px;
+  background-color: gray;
+   /* background-image: url(https://i.pinimg.com/originals/71/60/c9/7160c9f131fe0685678a5749e264e054.png); */
+}
+.shoe{
+  margin: 20% !important;
+  padding: 12px;
+}
+
+.title {
+  font-size: 50PX;
+}
+
+.title-1 {
+  font-size: 65PX;
+  color: black;
+  font-weight: 600;
+
+}
+
+
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
