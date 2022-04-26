@@ -4,45 +4,99 @@
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
-
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
-
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
+</head>
+  <body>
+    <div class="container box p-6
+                has-background-light">
+      <h1 class="title has-text-centered has-text-success">
+        New Workout Form
+      </h1>
+      <form action="">
+        <div class="field">
+          <label class="label">Workout Type</label>
+           <div class="control">
+            <div class="select">
+              <select>
+                <option>Cardio</option>
+                <option>Weight Training</option>
+                <option>Stretching</option>
+              </select>
+            </div>
+          </div>
+        </div>
+  
+        <div class="field">
+          <label class="label">Workout Name</label>
+          <div class="control has-icons-left
+                      has-icons-right">
+            <input
+              class="input is-success"
+              type="text"
+              placeholder="Enter the name of your workout"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+        </div>
+  
+        <div class="field">
+          <label class="label">Length of Workout</label>
+          <div class="control has-icons-left
+                      has-icons-right">
+            <input
+              class="input is-danger"
+              type=""
+              placeholder="How long was/is the workout"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+  
+        <div class="field">
+          <label class="label">Number of Reps</label>
+          <div class="control has-icons-left
+                      has-icons-right">
+            <input
+              class="input is-danger"
+              type=""
+              placeholder="How many reps wass your workout?"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-key"></i>
+            </span>
+          </div>
+        </div>
+  
+        <div class="field">
+          <label class="label">
+            Notes on the Workout
+          </label>
+          <div class="control">
+            <textarea
+              class="textarea"
+              placeholder="Anything else about the workout?"
+            ></textarea>
+          </div>
+        </div>
+  
+        
+  
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-success">
+              Submit
+            </button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
-
+  </body>
 <script src="./js/profile.js"></script>
