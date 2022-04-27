@@ -1,20 +1,29 @@
 [
   {
+    "date": "2022-04-26",
     "type": "Cardio",
-    "length": "Ran and jogged 5 miles",
+    "name": "Run",
+    "duration": "Ran and jogged 5 miles",
     "reps": 0,
-    "notes": "Ran five miles and took about an hour and a half"
+    "notes": "Ran five miles and took about an hour and a half",
+    "user_id":1
   },
   {
+    "date": "2022-04-27",
     "type": "Weight Training",
-    "length": 0,
+    "name": "Squat",
+    "duration": "N/A",
     "reps": "8x4",
-    "notes": "Squatted 135"
+    "notes": "Squatted 135",
+    "user_id":2
   },
   {
+    "date": "2022-04-25",
     "type": "Mix",
-    "length": "2 hours",
+    "name": "Weights and cardio",
+    "duration": "2 hours",
     "reps": "8x4",
-    "notes": "Ran several miles and squatted 135"
+    "notes": "Ran several miles and squatted 135",
+    "user_id":3
   }
 ]
