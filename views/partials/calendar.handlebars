@@ -12,11 +12,19 @@
       FullCalendar.Calendar(calendarEl, { initialView: 'dayGridWeek',events: [
       
       {{#each workoutData}}
-        {title:"{{this.name}}", 
+        {title:"{{this.name}}",
+        id:"{{this.id}}", 
         start:"{{this.date}}", 
         end:"{{this.date}}"},
       {{/each}}
-      ] });
+      ],
+
+  eventClick: function(info) {
+    document.location.href = `/workout/${info.event._def.publicId}`;
+    // change the border color just for fun
+    info.el.style.borderColor = 'red';
+  }
+});
       calendar.render(); });
 
     </script>
