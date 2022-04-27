@@ -40,7 +40,15 @@ header, .project:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
-
+form select {
+  background-image: none;
+}
+.label {
+  color: #fafafa
+}
+.has-text-success {
+  color: #00ff8d
+}
 @media screen and (max-width: 375px) {
   main,
   .fc table {

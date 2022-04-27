@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FITNESS PAL!</title>
+  <link href="./css/bulma-calendar.min.css" rel="stylesheet">
   <link
       rel='stylesheet'
       href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css'
@@ -100,7 +101,11 @@
       <article class="tile is-child notification is-light">
         <div class="content">
           <p class="title">GET STARTED</p>
-          <h2>Sign up or login to start tracking your results!</h2>
+          {{#if logged_in}}
+         <h2>Fill out the form to track your results!</h2>
+          {{else}}
+        <h2>Sign up or login to start tracking your results!</h2>
+          {{/if}}
           <div class="content">
             <div class="container">
                 <div class="columns">
@@ -109,6 +114,7 @@
 <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <nav>
+        
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
