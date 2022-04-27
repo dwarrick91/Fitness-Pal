@@ -27,6 +27,7 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+//view specific workouts in calender
 router.get('/project/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {

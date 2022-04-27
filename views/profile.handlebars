@@ -14,13 +14,13 @@
       <h1 class="title has-text-centered has-text-success">
         New Workout Form
       </h1>
-      <form action="">
-        <input type="date" id="bulmaCalender">
+      <form action="/workout" method="post">
+        <input type="date" name="date" id="bulmaCalender">
         <div class="field">
           <label class="label">Workout Type</label>
             <div class="control">
             <div class="select">
-              <select>
+              <select name="type">
                 <option>Cardio</option>
                 <option>Weight Training</option>
                 <option>Stretching</option>
@@ -37,6 +37,7 @@
               class="input is-success"
               type="text"
               placeholder="Enter the name of your workout"
+              name="name"
             />
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
@@ -52,6 +53,7 @@
               class="input is-danger"
               type="text"
               placeholder="How long is the workout"
+              name="duration"
             />
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
@@ -66,6 +68,7 @@
             <input
               class="input is-danger"
               type="text"
+              name="reps"
               placeholder="How many reps was your workout?"
             />
             <span class="icon is-small is-left">
@@ -81,13 +84,11 @@
           <div class="control">
             <textarea
               class="textarea"
+              name="notes"
               placeholder="Anything else about the workout?"
             ></textarea>
           </div>
         </div>
-  
-        
-  
         <div class="field is-grouped">
           <div class="control">
             <button class="button is-success">
