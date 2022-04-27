@@ -18,7 +18,7 @@ router.get('/', withAuth, async (req, res) => {
     const workout = workoutData.map((workout) => workout.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
+    res.render('profile', { 
       workout, 
       logged_in: req.session.logged_in 
     });
@@ -51,6 +51,7 @@ router.get('/project/:id', withAuth, async (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
+  
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -60,10 +61,18 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
+    console.log(user);
+      const workoutData = await Workout.findAll({
+        where: {
+          user_id: user.id,
+        },
+      });
+      console.log(workoutData);
+        res.render('profile', {
+          workoutData,
+          ...user,
+          logged_in: true,
+        });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
