@@ -66,6 +66,7 @@ router.get('/profile', withAuth, async (req, res) => {
         where: {
           user_id: user.id,
         },
+        raw: true,
       });
       console.log(workoutData);
         res.render('profile', {

@@ -1,5 +1,6 @@
 [
   {
+    "date": "2022-04-26",
     "type": "Cardio",
     "name": "Run",
     "duration": "Ran and jogged 5 miles",
@@ -8,6 +9,7 @@
     "user_id":1
   },
   {
+    "date": "2022-04-27",
     "type": "Weight Training",
     "name": "Squat",
     "duration": "N/A",
@@ -16,6 +18,7 @@
     "user_id":2
   },
   {
+    "date": "2022-04-25",
     "type": "Mix",
     "name": "Weights and cardio",
     "duration": "2 hours",

@@ -5,7 +5,11 @@ class Workout extends Model {}
 
 Workout.init(
   {
-
+    date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -23,7 +27,6 @@ Workout.init(
     duration: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: DataTypes.NOW,
     },
     reps: {
       type: DataTypes.STRING,
