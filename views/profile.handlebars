@@ -14,13 +14,13 @@
       <h1 class="title has-text-centered has-text-success">
         New Workout Form
       </h1>
-      <form action="/workout" method="post">
+      <form id="submitWorkout">
         <input type="date" name="date" id="bulmaCalender">
         <div class="field">
           <label class="label">Workout Type</label>
             <div class="control">
             <div class="select">
-              <select name="type">
+              <select name="type" class="workoutType">
                 <option>Cardio</option>
                 <option>Weight Training</option>
                 <option>Stretching</option>
@@ -34,7 +34,7 @@
           <div class="control has-icons-left
                       has-icons-right">
             <input
-              class="input is-success"
+              class="input is-success workoutName"
               type="text"
               placeholder="Enter the name of your workout"
               name="name"
@@ -50,7 +50,7 @@
           <div class="control has-icons-left
                       has-icons-right">
             <input
-              class="input is-danger"
+              class="input is-danger workoutLength"
               type="text"
               placeholder="How long is the workout"
               name="duration"
@@ -66,7 +66,7 @@
           <div class="control has-icons-left
                       has-icons-right">
             <input
-              class="input is-danger"
+              class="input is-danger workoutReps"
               type="text"
               name="reps"
               placeholder="How many reps was your workout?"
@@ -83,7 +83,7 @@
           </label>
           <div class="control">
             <textarea
-              class="textarea"
+              class="textarea workoutNotes"
               name="notes"
               placeholder="Anything else about the workout?"
             ></textarea>
@@ -107,3 +107,4 @@
 
 <script src="./js/bulma-calendar.min.js"></script>
 <script src="./js/date-picker.js"></script>
+<script src="./js/workout.js"></script>
