@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FITNESS PAL!</title>
+  <link href="./css/bulma-calendar.min.css" rel="stylesheet">
+  <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css'
+    />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -14,14 +19,6 @@
 </head>
 <body> 
 
-  {{!-- <div class="navbar has-shadow is-WHITE">
-    <div class="navbar-brand">
-      <a class="navbar-item"></a>
-      <img src="https://media.istockphoto.com/vectors/fitness-graphic-design-vector-id1024413554?k=20&m=1024413554&s=612x612&w=0&h=YJdCiL7d09rxAMG69Maj0MPtc4Gg3ceH36N8a1BkIzU=" class="img2" width="120" height="90">
-      <p class="title is-1 mt-5 has-text-black">FITNESS PAL</p>
-      <p class="title is-5 mt-5 py-4 px-5 has-text-black">TRACK WORKOUTS <strong>INSTANTLY</strong>!</p>
-</div>
-    </div> --}}
 
   <section class="hero is-white">
  <img src="images/istockphoto-1024413554-612x612.png" class="img2" width="120" height="90">
@@ -34,8 +31,6 @@
     </p>
   </div>
 </section>  
-
-
 
 
 
@@ -110,7 +105,11 @@
       <article class="tile is-child notification is-light">
         <div class="content">
           <p class="title">GET STARTED</p>
-          <h2>Sign up or login to start tracking your results!</h2>
+          {{#if logged_in}}
+         <h2>Fill out the form to track your results!</h2>
+          {{else}}
+        <h2>Sign up or login to start tracking your results!</h2>
+          {{/if}}
           <div class="content">
             <div class="container">
                 <div class="columns">
@@ -119,6 +118,7 @@
 <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <nav>
+        
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
