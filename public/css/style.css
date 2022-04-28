@@ -59,6 +59,12 @@ header, .project:not(:last-child) {
   content: none;
 
 }
+.label {
+  color: #fafafa
+}
+.has-text-success {
+color: #00ff8d
+}
 p .subtitle {
   display: inline;
 }
