@@ -6,31 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FITNESS PAL!</title>
   <link href="./css/bulma-calendar.min.css" rel="stylesheet">
-  <link
-      rel='stylesheet'
-      href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css'
-    />
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <linl rel="stylesheet" href="/css/styles-quote.css"
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
 </head>
+
 <body class="column">
-<section class="hero is-light">
-  <div class="hero-body">
-    <p class="title">
-      FITNESS PAL 
-      <img src="/fitness2.png"/>
-    </p>
-    <p class="subtitle">
-      TRACK WORKOUTS <strong>INSTANTLY</strong>!
-    </p>
-  </div>
-  
-</section>
-{{!-- header start --}}
+  <section class="hero is-light">
+    <div class="hero-body">
+      <p class="title">
+        FITNESS PAL
+        <img src="/fitness2.png" />
+      </p>
+      <p class="subtitle">
+        TRACK WORKOUTS <strong>INSTANTLY</strong>!
+      </p>
+    </div>
+
+  </section>
+  {{!-- header start --}}
 
   <div class="navbar-end">
     <div class="navbar-item">
@@ -38,8 +37,8 @@
       </div>
     </div>
   </div>
-</div>
-  </body>
+  </div>
+</body>
 {{!-- header end --}}
 
 
@@ -47,43 +46,65 @@
 {{!-- body start --}}
 {{#unless logged_in}}
 <div class="tile is-ancestor">
-    <div class="tile is-vertical is-8">
-      <div class="tile">
-        <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification is-light">
-            <p class="title">WELCOME</p>
-            <p class="subtitle">Start your fitness journey off on the right foot, keep track of your progress with Fitness Pal! <br><br>By using Fitness Pal, you will be able to keep track of every exercise in your workout to reach your fitness goals. </p>
-          </article>
-          <article class="tile is-child notification is-light">
-            <p class="title">GET MOTIVATED</p>
-            <p class="subtitle">Writing down your activity is a great way to keep yourself accountable to your goals. <br><br>Progress is easily visualized by exercise and body part trained, and Fitness Pal helps you keep track of your sessions.<br> <br>One of the reasons you may have had trouble seeing desired results in the past is due to a lack of tracking your progress.
-            </p>
-          </article>
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-light">
+          <p class="title">WELCOME</p>
+          <p class="subtitle">Start your fitness journey off on the right foot, keep track of your progress with Fitness
+            Pal! <br><br>By using Fitness Pal, you will be able to keep track of every exercise in your workout to reach
+            your fitness goals. </p>
+        </article>
+        <article class="tile is-child notification is-light">
+          <p class="title">GET MOTIVATED</p>
+          <p class="subtitle">Writing down your activity is a great way to keep yourself accountable to your goals.
+            <br><br>Progress is easily visualized by exercise and body part trained, and Fitness Pal helps you keep
+            track of your sessions.<br> <br>One of the reasons you may have had trouble seeing desired results in the
+            past is due to a lack of tracking your progress.
+          </p>
+          <div class="row flex-top justifiy-content-center">
+
+            <button id="button" class="btn-large new-quote-button" onClick="getQuote()">New Quote</button>
+          </div>
+          <div class="row justifiy-content-center">
+            <main class="card">
+           <p class="quote card-body center" id="newQuoteSection">...</p>
+
+            </main>
         </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-light">
-            <p class="title">STAY FIT</p>
-            
-            <p class="subtitle">Regular physical activity can improve your muscle strength and boost your endurance.<br><br> Staying active can also help you maintain a healthy weight, decrease risk of illness, reduce your risk for type 2 diabetes, heart disease, and reduce your risk for some cancers.</p>
-            <figure class="image is-4by3">
-              <img src="https://mountainsidefitness.com/wp-content/uploads/2020/05/Mountainside-home-Retouched-v1.jpg">
-            </figure>
-          </article>
-        </div>
+
+
+        </article>
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-light">
-          <p class="title">TRACK WORKOUTS</p>
-          <p class="subtitle">Plan, organize and track your workout sessions day by day using Fitness Pal's personal profile calendar so that you get the most out of your fitness time.<br><br> Keeping track of workouts keeps you honest, gets you inspired, makes you exercise harder and a log provides a clear measurement towards completing your goals.</p>
-          <div class="content">
-            <!-- Content -->
-          </div>
+          <p class="title">STAY FIT</p>
+
+          <p class="subtitle">Regular physical activity can improve your muscle strength and boost your
+            endurance.<br><br> Staying active can also help you maintain a healthy weight, decrease risk of illness,
+            reduce your risk for type 2 diabetes, heart disease, and reduce your risk for some cancers.</p>
+          <figure class="image is-4by3">
+            <img src="https://mountainsidefitness.com/wp-content/uploads/2020/05/Mountainside-home-Retouched-v1.jpg">
+          </figure>
         </article>
       </div>
     </div>
-    {{!-- end --}}
-    {{else}}
-    <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-light">
+        <p class="title">TRACK WORKOUTS</p>
+        <p class="subtitle">Plan, organize and track your workout sessions day by day using Fitness Pal's personal
+          profile calendar so that you get the most out of your fitness time.<br><br> Keeping track of workouts keeps
+          you honest, gets you inspired, makes you exercise harder and a log provides a clear measurement towards
+          completing your goals.</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </article>
+    </div>
+  </div>
+  {{!-- end --}}
+  {{else}}
+  <div class="tile is-ancestor">
     <div class="tile is-vertical is-8">
       <div class="tile">
         <div class="tile is-parent is-vertical">
@@ -97,46 +118,46 @@
 
     {{!-- login form start --}}
 
-<div class="tile is-parent">
+    <div class="tile is-parent">
       <article class="tile is-child notification is-light">
         <div class="content">
           <p class="title">GET STARTED</p>
           {{#if logged_in}}
-         <h2>Fill out the form to track your results!</h2>
+          <h2>Fill out the form to track your results!</h2>
           {{else}}
-        <h2>Sign up or login to start tracking your results!</h2>
+          <h2>Sign up or login to start tracking your results!</h2>
           {{/if}}
           <div class="content">
             <div class="container">
-                <div class="columns">
-                    <div class="column center is-three-thirds-mobile">
-        {{!-- <div class="card shoe has-background-light"> --}}
-<div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <nav>
-        
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
+              <div class="columns">
+                <div class="column center is-three-thirds-mobile">
+                  {{!-- <div class="card shoe has-background-light"> --}}
+                    <div class="flex-column justify-space-around">
+                      <header class="display-flex justify-space-between align-center p-2">
+                        <nav>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+                          <!-- Conditionally render login or logout links -->
+                          {{#if logged_in}}
+                          <a href="/profile">profile</a> |
+                          <button class="no-button" id="logout">logout</button>
+                          {{else}}
+                          <a href="/login">login</a>
+                          {{/if}}
+                        </nav>
+                      </header>
+                      <main class="container container-fluid mt-5">
+                        <!-- Render the sub layout -->
+                        {{{ body }}}
+                      </main>
+                      <footer>
+
+                      </footer>
+                    </div>
+
+                    <!-- Render script for logged in users only -->
+                    {{#if logged_in}}
+                    <script src="/js/logout.js"></script>
+                    {{/if}}
+                    </body>
 
 </html>
