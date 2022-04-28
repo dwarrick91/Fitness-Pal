@@ -72,8 +72,9 @@ p .subtitle {
 
 
 .hero.is-white {
-
-  background-image: url();
+  background-image: url(/images/header5.jpg);
+  width: auto;
+  
 }
 
 
