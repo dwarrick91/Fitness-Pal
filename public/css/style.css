@@ -50,8 +50,21 @@ header, .project:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
+/* form select {
+  background-image: none;
+} */
+.select:not(.is-multiple):not(.is-loading)::after {
+  
+  
+  content: none;
 
-
+}
+.label {
+  color: #fafafa
+}
+.has-text-success {
+color: #00ff8d
+}
 p .subtitle {
   display: inline;
 }
