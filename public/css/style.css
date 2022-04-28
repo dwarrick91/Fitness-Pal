@@ -40,8 +40,13 @@ header, .project:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
-form select {
+/* form select {
   background-image: none;
+} */
+.select:not(.is-multiple):not(.is-loading)::after {
+  
+  
+  content: none;
 }
 .label {
   color: #fafafa
