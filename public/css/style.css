@@ -1,23 +1,33 @@
-body{
+body {
   margin: auto;
   padding: 50px;
-  background-color: gray;
-   /* background-image: url(https://i.pinimg.com/originals/71/60/c9/7160c9f131fe0685678a5749e264e054.png); */
+  background-color: rgb(0, 0, 0);
+  background-image: url(https://wallpaperaccess.com/full/1720244.jpg);
 }
+
 .shoe{
   margin: 20% !important;
   padding: 12px;
 }
 
 .title {
-  font-size: 50PX;
+  font-size: 40PX;
   font-family: 'Montserrat', sans-serif;
+  
+}
+
+.title3 {
+  font-size: 52PX;
+  font-family: 'Montserrat', sans-serif;
+  display: inline;
+  
 }
 
 .title-1 {
   font-size: 65PX;
   color: black;
   font-weight: 600;
+  
 
 }
 
@@ -40,18 +50,33 @@ header, .project:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
-form select {
-  background-image: none;
+
+
+p .subtitle {
+  display: inline;
 }
-.label {
-  color: #fafafa
+
+.img2 {
+  margin-right: 50px;
+  
 }
-.has-text-success {
-  color: #00ff8d
+
+.notification.is-light {
+  border: 3px;
+  border-color:black;
+  border-style: dashed;
+
+
+
 }
-@media screen and (max-width: 375px) {
-  main,
-  .fc table {
-    font-size: 10px;
-  }
+
+
+.hero.is-white {
+
+  background-image: url();
 }
+
+
+
+
+
