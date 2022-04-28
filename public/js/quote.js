@@ -17,6 +17,10 @@ let quotes = [
 function getQuote() {
 
     var randomNumer = Math.floor(Math.random()* quotes.length)
-    document.getElementById('newQuoteSection').innerHTML = quotes[randomNumer];
+    const quoteSection = document.getElementById('newQuoteSection')
+    if (quoteSection) {
+        quoteSection.innerHTML = quotes[randomNumer];
+    }
+    
 }
 getQuote()
